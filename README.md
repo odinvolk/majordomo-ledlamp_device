@@ -1,38 +1,17 @@
-# WLED в простых устройствах
+# WiFi лампа-будильник в простых устройствах
 
-Простое устройство для интеграции в Majordomo устройств на прошивке [WLED](https://github.com/Aircoookie/WLED)
+Простое устройство для интеграции в Majordomo устройств на прошивке
 
-![](https://connect.smartliving.ru/cms/data_images/1450_image.png)
+Управление светильника на адресных светодиодах с кучей эффектов, управлением по Wi-Fi и функцией будильник-рассвет
 
-![](https://connect.smartliving.ru/cms/data_images/1449_image.png)
+Инструкция как сделать саму лампу
 
-# Resources
+ [https://github.com/gunner47/GyverLamp](https://github.com/gunner47/GyverLamp)
 
- * [Страница проекта](https://connect.smartliving.ru/tasks/681.html)
- * [Страница дополнения](https://connect.smartliving.ru/addons/category6/234.html)
+![](https://github.com/AlexGyver/GyverLamp/raw/master/proj_img.jpg)
 
-Прошивка Wled управляет адресной лентой ws2812b.
-В прошивке [куча эффектов и палитр](https://github.com/Aircoookie/WLED/wiki/List-of-effects-and-palettes)
-WEBUI прошивки
+Управление осуществляется через MQTT [этой прошивки](https://community.alexgyver.ru/threads/wifi-lampa-budilnik-obsuzhdenie-proshivki-ot-gunner47.2418/page-50#post-30883)
 
-Интеграция через MQTT, подписка на топики v и api
-Простое устройство позволяет
- -  вкл/выкл подстветку,
- -  изменять цвет, яркость
- -  переключать эффекты и палитры
- -  настраивать скорость и интенсивность эффектов
-Описание настройки ПУ
+При поддержке [HOLD](https://connect.smartliving.ru/profile/2080)
 
-![](https://connect.smartliving.ru/cms/data_images/1449_image.png)
-
-Настройка ПУ WLED
-
-Получение статусов и управление осуществляется через топики MQTT - v и api.
-
-Статусы передаются устройством в топик v (в модуле MQTT /wled/1363ee/v, где вместо 1363ee будет идентификатор вашего устройства), к данному топику нужно привязать свойство ПУ mqtt_v.
-
-Для управления устройством нужен топик api, его нужно создать в модуле MQTT самому (/wled/1363ee/api, вместо 1363ee указываем идентификатор вашего устройства), его привязываем к свойству ПУ mqtt_api.
-
-В настройках ПУ есть поле IP, в нем указывается IP адрес устройства, по этому адресу нажатием кнопки ⚙️ вызывается WEBUI устройства.
-
-![](https://mjdm.ru/forum/download/file.php?id=18626)
+![](https://connect.smartliving.ru/cms/data_images/1443_image.jpg)
